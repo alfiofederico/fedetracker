@@ -76,7 +76,7 @@ function addTransactionDOM(transaction) {
 function updateValues() {
   const amounts = transactions.map(transaction => transaction.amount);
 
-  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(0);
 
   const income = amounts
     .filter(item => item > 0)
