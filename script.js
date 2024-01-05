@@ -79,18 +79,18 @@ function updateValues() {
   const total = amounts
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(0)
-    .toLocaleString("ja-JP");
+    .toLocaleString();
 
   const income = amounts
     .filter((item) => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(0)
-    .toLocaleString("ja-JP");
+    .toLocaleString();
 
   const expense = (
     amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
     -1
-  ).toFixed(0).toLocaleString("ja-JP");
+  ).toFixed(0).toLocaleString();
 
   balance.innerText = `¥${total}`;
   money_plus.innerText = `¥${income}`;
